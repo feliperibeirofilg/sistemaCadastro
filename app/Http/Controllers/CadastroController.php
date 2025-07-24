@@ -12,6 +12,7 @@ class CadastroController extends Controller
     }
 
     public function cadastrarItem(Request $request){
+
         $request->validate([
             'ds_produto' => 'required|string|max:255',
             'lote_produto' => 'required|string|max:255',
@@ -26,11 +27,11 @@ class CadastroController extends Controller
             'qtd_produto' => $request->qtd_produto,
         ]);
 
-        return view('inicio')->with('success', 'Produto cadastrado com sucesso!');
+        return view('welcome')->with('success', 'Produto cadastrado com sucesso!');
     }
 
     public function listarProdutos(){
         $produto = Produto::all();
-        return view('cadastro');
+        return view('cadastro.item', compact('produto'));
     }
 }

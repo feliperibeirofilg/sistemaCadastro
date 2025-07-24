@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('produtos', function (Blueprint $table) {
+            $table->id();
+            $table->string('ds_produto');
+            $table->string('lote_produto');
+            $table->date('dt_vencimento');
+            $table->integer('qtd_produto');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -19,6 +26,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('produtos');
     }
+
 };

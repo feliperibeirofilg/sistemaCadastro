@@ -1,0 +1,41 @@
+  db:
+    image: mysql:8.0
+    container_name: laravel_db
+    environment:
+      - MYSQL_DATABASE=laravel
+      - MYSQL_USER=laravel
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - laravel_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:latest
+    container_name: laravel_redis
+    networks:
+      - laravel_network
+
+
+      <?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Produto extends Model
+{
+    protected $fillable = [
+        'ds_produto',
+        'lote_produto',
+        'dt_vencimento',
+        'qtd_produto'
+    ];
+
+}
