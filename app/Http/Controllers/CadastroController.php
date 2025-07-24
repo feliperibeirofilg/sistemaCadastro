@@ -32,6 +32,6 @@ class CadastroController extends Controller
 
     public function listarProdutos(){
         $produto = Produto::all();
-        return view('cadastro.item', compact('produto'));
+        return view('estoque.produtos', compact('produtos'));
     }
 }

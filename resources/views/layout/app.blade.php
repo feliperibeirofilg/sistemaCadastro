@@ -21,6 +21,10 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">Editar Item</a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="/estoque/produtos" class="nav-link">Listar Produtos</a>
+                </li>
             </div>
         </nav>
         <div class="container mt-05">
