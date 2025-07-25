@@ -25,8 +25,8 @@
         </div>
 
         <div class="form-control">
-            <label for="dt_validade">
-                <input type="date" name="dt_validade">
+            <label for="dt_vencimento">
+                <input type="date" name="dt_vencimento">
             </label>
         </div>
 

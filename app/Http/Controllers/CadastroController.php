@@ -27,12 +27,12 @@ class CadastroController extends Controller
             'qtd_produto' => $request->qtd_produto,
         ]);
 
-        return view('welcome')->with('success', 'Produto cadastrado com sucesso!');
+        return view('estoque.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }
 
     public function listarProdutos(){
-        $produto = Produto::all();
-        return view('estoque.produtos', compact('produto'));
+        $produtos = Produto::all();
+        return view('estoque.produtos', compact('produtos'));
     }
 
     public function editarProdutos(Request $request, $id){

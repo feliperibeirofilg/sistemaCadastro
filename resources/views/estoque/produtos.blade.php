@@ -13,7 +13,7 @@
         </thead>
 
         <tbody>
-            @foreach($produto as $produtos)
+            @foreach($produtos as $produto)
             <tr>
                 <td>{{ $produto->ds_produto }}</td>
                 <td>{{ $produto->lote_produto }}</td>
