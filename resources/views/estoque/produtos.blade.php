@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 @section('content')
 
     <table class="table table-striped">
@@ -13,20 +13,20 @@
         </thead>
 
         <tbody>
-            @foreach($produtos as $produto)
+            @foreach($produto as $produtos)
             <tr>
                 <td>{{ $produto->ds_produto }}</td>
                 <td>{{ $produto->lote_produto }}</td>
                 <td>{{ $produto->dt_validade }}</td>
                 <td>{{ $produto->qtd_produto }}</td>
                 <td>
-                    <a href="#editar" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{{ route('editarForm', ['id'=> $produto->id]) }}" class="btn btn-primary btn-sm">Editar</a>
                 </td>
                 <td>
-                    <form action="#deletar" class=""style="display:inline;">
+                    <form action="#deletar"style="display:inline">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esse produto?">Excluir</button>
+                        <button class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esse produto?')">Excluir</button>
                     </form>
                 </td>
             </tr>

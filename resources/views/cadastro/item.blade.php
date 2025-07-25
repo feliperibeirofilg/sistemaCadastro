@@ -2,6 +2,8 @@
 
 @section('content')
 
+    <h1>Cadastro de itens:</h1>
+
     <form action="{{ route('cadastrarItem') }}" method="POST" class="form-control">
         @csrf
         <div class="form-control">
@@ -29,7 +31,7 @@
         </div>
 
         <div class="btn">
-            <input type="submit" value="Cadastrar" class="btn btn-primary">
+            <input  type="submit" value="Cadastrar Item" class="btn btn-primary">
         </div> 
 
     </form>

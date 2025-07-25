@@ -11,20 +11,13 @@
 </head>
 <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <a href="#" class="navbar-brand">Inicio</a>
+            <div class="collapse navbar-collapse" id="navbar Nav">
+                <a href="/estoque/produtos" class="navbar-brand">Inicio </a>
+                    <a href="/cadastro/item" class="nav-brand">Cadastrar Item </a>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Cadastrar Item</a>
-                </li>
+                    <a href="/estoque/produtos" class="nav-brand">Editar Item </a>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Editar Item</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="/estoque/produtos" class="nav-link">Listar Produtos</a>
-                </li>
+                    <a href="/estoque/produtos" class="nav-brand">Listar Produtos </a>
             </div>
         </nav>
         <div class="container mt-05">

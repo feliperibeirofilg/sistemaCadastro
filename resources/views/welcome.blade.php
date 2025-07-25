@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('content')
 
-    <h1>TESTANDO</h1> 
+    <h1>Sistema de Cadastro de produtos</h1> 
 
 @endsection
