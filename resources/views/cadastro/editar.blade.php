@@ -2,36 +2,35 @@
 @section('content')
 
 
-<div class="container">
-    <form action="{{ route('editarItem', $produto->id) }}" method="post">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <form action="{{ route('editarItem', $produtos->id) }}" method="post" class="bg-white p-4 rounded shadow" style="width: 100%; max-width: 500px;">
         @csrf
-        <div calss="mb-3">
-            <label for="ds_produto" class="form-label">
-                <input type="text" nome="ds_produto" value="{{$produto->ds_produto}}" required>
-            </label>
+        <h2 class="mb-4 text-center fw-bold">Editar item cadastrado:</h2>
+
+        <div class="mb-3">
+            <label for="ds_produto" class="form-label">Nome do item:</label>
+                <input type="text" class="form-control border border-dark rounded" name="ds_produto" value="{{$produtos->ds_produto}}" required>
         </div>
 
-        <div calss="mb-3">
-            <label for="lote_produto" class="form-label">
-                <input type="text" nome="ds_produto" value="{{$produto->lote_produto}}" required>
-            </label>
+        <div class="mb-3">
+            <label for="lote_produto" class="form-label">Lote do Produto:</label>
+                <input type="text" class="form-control border border-dark rounded" name="ds_produto" value="{{$produtos->lote_produto}}" required>
         </div>
 
-        <div calss="mb-3">
-            <label for="dt_vencimento" class="form-label">
-                <input type="text" nome="ds_produto" value="{{$produto->dt_vencimento}}" required>
-            </label>
+        <div class="mb-3">
+            <label for="dt_vencimento" class="form-label">Quantidade:</label>
+                <input type="text" class="form-control border border-dark rounded" name="ds_produto" value="{{$produtos->dt_vencimento}}" required>
         </div>
 
-        <div calss="mb-3">
-            <label for="qtd_produto" class="form-label">
-                <input type="text" nome="ds_produto" value="{{$produto->qtd_produto}}" required>
-            </label>
+        <div class="mb-3">
+            <label for="qtd_produto" class="form-label">Data de Vencimento:</label>
+                <input type="text" class="form-control border border-dark rounded" name="ds_produto" value="{{$produtos->qtd_produto}}" required>
         </div>
 
-        <button class="btn btn-primary" type="submit">Salvar</button>
-        <a href="{{ route('listaDeProduto')}}" class="btn btn-secondary">Cancelar</a>
-
+      <div class="d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-success w-50 me-2">Salvar</button>
+            <a href="{{ route('listaDeProdutos') }}" class="btn btn-outline-secondary w-50 ms-2">Cancelar</a>
+        </div>
     </form>
 </div>
 @endsection

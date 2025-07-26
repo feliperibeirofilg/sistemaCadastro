@@ -12,12 +12,15 @@
 <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
             <div class="collapse navbar-collapse" id="navbar Nav">
-                <a href="/estoque/produtos" class="navbar-brand">Inicio </a>
-                    <a href="/cadastro/item" class="navbar-brand">Cadastrar Item </a>
+                <a href="/" title="Inicio">
+                    <img src="{{ asset('icon/cadastro.png') }}" alt="Ícone de cadastro" class="me-2" style="width: 32px;">
+                </a>    
+                <a href="/" class="navbar-brand">Inicio</a>
+                    <a href="/cadastro/item" class="navbar-brand">Cadastrar Item</a>
 
-                    <a href="/estoque/produtos" class="navbar-brand">Editar Item </a>
+                 <!--   <a href="/estoque/produtos" class="navbar-brand">Editar Item </a>-->
 
-                    <a href="/estoque/produtos" class="navbar-brand">Listar Produtos </a>
+                    <a href="/estoque/produtos" class="navbar-brand">Listar Produtos</a>
             </div>
         </nav>
         <div class="container mt-05">

@@ -37,7 +37,7 @@ class CadastroController extends Controller
 
     public function editarProduto($id){
         $produtos = Produto::findOrFail($id);
-        return view ('estoque.produtos', compact('produtos'));
+        return view ('cadastro.editar', compact('produtos'));
     }
 
     public function atualizarProduto(Request $request, $id){
