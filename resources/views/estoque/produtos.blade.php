@@ -8,7 +8,7 @@
                 <th>Lote:</th>
                 <th>Validade:</th>
                 <th>Qtdde:</th>
-                <th>Ações</th>
+                <th>Ações:</th>
             </tr>
         </thead>
 

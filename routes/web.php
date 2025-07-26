@@ -14,9 +14,9 @@ Route::post('/cadastro/item', [CadastroController::class, 'cadastrarItem'])->nam
 
 //Rota de edição do item
 //Rota get exibe o formulario
-Route::get('/cadastro/editar/{id}', [CadastroController::class, 'listarProdutos'])->name('editarForm');
+Route::get('/cadastro/editar/{id}', [CadastroController::class, 'editarProduto'])->name('editarForm');
 //Rota postfaz a edição
-Route::post('/cadastro/editar/{id}', [CadastroController::class, 'editarProdutos'])->name('editarItem');
+Route::post('/cadastro/editar/{id}', [CadastroController::class, 'atualizarProduto'])->name('editarItem');
 
 Route::get('/estoque/produtos',[CadastroController::class, 'listarProdutos'])->name('listaDeProdutos');
 
