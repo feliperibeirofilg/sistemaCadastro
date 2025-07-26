@@ -20,4 +20,4 @@ Route::post('/cadastro/editar/{id}', [CadastroController::class, 'editarProdutos
 
 Route::get('/estoque/produtos',[CadastroController::class, 'listarProdutos'])->name('listaDeProdutos');
 
-//Route::delete('/estoque/produtos', [CadastroController::class, ''])->name('cadastrarItem');
+Route::delete('/estoque/produtos/{id}', [CadastroController::class, 'excluirProduto'])->name('excluirItem');

@@ -17,13 +17,13 @@
             <tr>
                 <td>{{ $produto->ds_produto }}</td>
                 <td>{{ $produto->lote_produto }}</td>
-                <td>{{ $produto->dt_validade }}</td>
+                <td>{{ $produto->dt_vencimento }}</td>
                 <td>{{ $produto->qtd_produto }}</td>
                 <td>
                     <a href="{{ route('editarForm', ['id'=> $produto->id]) }}" class="btn btn-primary btn-sm">Editar</a>
                 </td>
                 <td>
-                    <form action="#deletar"style="display:inline">
+                <form action="{{ route('excluirItem', ['id' => $produto->id]) }}" method="post" style="display:inline">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esse produto?')">Excluir</button>

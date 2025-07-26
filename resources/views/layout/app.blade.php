@@ -13,11 +13,11 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
             <div class="collapse navbar-collapse" id="navbar Nav">
                 <a href="/estoque/produtos" class="navbar-brand">Inicio </a>
-                    <a href="/cadastro/item" class="nav-brand">Cadastrar Item </a>
+                    <a href="/cadastro/item" class="navbar-brand">Cadastrar Item </a>
 
-                    <a href="/estoque/produtos" class="nav-brand">Editar Item </a>
+                    <a href="/estoque/produtos" class="navbar-brand">Editar Item </a>
 
-                    <a href="/estoque/produtos" class="nav-brand">Listar Produtos </a>
+                    <a href="/estoque/produtos" class="navbar-brand">Listar Produtos </a>
             </div>
         </nav>
         <div class="container mt-05">

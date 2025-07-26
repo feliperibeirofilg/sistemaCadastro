@@ -26,8 +26,8 @@ class CadastroController extends Controller
             'dt_vencimento' => $request->dt_vencimento,
             'qtd_produto' => $request->qtd_produto,
         ]);
-
-        return view('estoque.produtos')->with('success', 'Produto cadastrado com sucesso!');
+        return redirect()->route('visualizarItem')->with('success', 'Produto Cadastrado com sucesso!');
+       // return view('estoque.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }
 
     public function listarProdutos(){
@@ -48,5 +48,11 @@ class CadastroController extends Controller
         $produto -> upddate($request->only(['ds_produto', 'lote_produto', 'dt_vencimento', 'qtd_produto']));
 
         return view('estoque.produtos', compact('produto'));
+    }
+
+    public function excluirProduto(Request $request, $id){
+        $produto = Produto::findOrFail($id);
+        $produto->delete();
+        return redirect()->route('listaDeProdutos')->with('success', "Produto excluido com sucesso!");
     }
 }
