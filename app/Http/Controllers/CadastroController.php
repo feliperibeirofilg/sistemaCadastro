@@ -30,8 +30,26 @@ class CadastroController extends Controller
        // return view('estoque.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }
 
-    public function listarProdutos(){
-        $produtos = Produto::all();
+    public function listarProdutos(Request $request){
+
+        $ordenarPor = $request->get('ordenar_por');
+        
+        switch ($ordenarPor) {
+            case 'nome_asc':
+                $produtos = Produto::orderBy('ds_produto', 'asc')->get();
+                break;
+            case 'nome_desc':
+                $produtos = Produto::orderBy('ds_produto', 'desc')->get();
+                break;
+            case 'quantidade_asc':
+                $produtos = Produto::orderBy('qtd_produto', 'asc')->get();
+                break;
+            case 'quantidade_desc':
+                $produtos = Produto::orderBy('qtd_produto', 'asc')->get();
+                break;
+            default:
+                $produtos = Produto::all();
+        }
         return view('estoque.produtos', compact('produtos'));
     }
 
