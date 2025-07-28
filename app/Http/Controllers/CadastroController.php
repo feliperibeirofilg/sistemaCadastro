@@ -44,15 +44,15 @@ class CadastroController extends Controller
         $produto = Produto::findOrFail($id);
 
         $request->validate([
-            'ds_produto' => 'required|string|max100',
-            'lote_produto' => 'required|string|max100',
+            'ds_produto' => 'required|string|max:100',
+            'lote_produto' => 'required|string|max:100',
             'dt_vencimento' => 'required|date',
             'qtd_produto' => 'required|integer'
         ]);
 
-        $produto -> upddate($request->only(['ds_produto', 'lote_produto', 'dt_vencimento', 'qtd_produto']));
+        $produto -> update($request->only(['ds_produto', 'lote_produto', 'dt_vencimento', 'qtd_produto']));
 
-        return view('estoque.produtos', compact('produto'));
+        return redirect()->route('listaDeProdutos')->with('success', 'Produto atualizado com sucesso!');
     }
 
     public function excluirProduto(Request $request, $id){
