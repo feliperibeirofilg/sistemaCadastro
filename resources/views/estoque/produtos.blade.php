@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('content')
-
+        <!-- Filtrar os produtos pelo nome, quantidade -->
         <form method="GET" action="{{ route('listaDeProdutos') }}" class="mb-4">
             <div class="row g-2 align-items-center">
                 <div class="col-auto">

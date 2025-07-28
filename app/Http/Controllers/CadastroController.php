@@ -45,7 +45,7 @@ class CadastroController extends Controller
                 $produtos = Produto::orderBy('qtd_produto', 'asc')->get();
                 break;
             case 'quantidade_desc':
-                $produtos = Produto::orderBy('qtd_produto', 'asc')->get();
+                $produtos = Produto::orderBy('qtd_produto', 'desc')->get();
                 break;
             default:
                 $produtos = Produto::all();
